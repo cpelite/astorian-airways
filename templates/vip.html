@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% set active_page = ["vip"] %}
+
+{% block title %}Fleet{% endblock %}
+
+{% block banner_color %}bg-color4{% endblock %}
+{% block banner_title %}The Astorian Airways Fleet{% endblock %}
+{% block banner_content %}See how quick you can get to all your personal destinations.{% endblock %}
+
+{% block content %}
+    <div class="row last">
+        <div class="col-lg-12 centered offer-box">
+          <div class="img-circle offer-circle centered bg-black txt-white"><span class="glyphicon glyphicon-king" aria-hidden="true"></span></div>
+          <h2>Business Shuttle</h2>
+          <p>Nicht immer reicht ein normales Ticket. F&uuml;r unsere anspruchsvollen Kunden bieten wir auch Charter-Flugzeuge, dass Sie bequem zu Ihrem Terminen bringt. Wir betreiben die Maschine, stellen den Service sowie die Crew und Sie bestimmen Ziel und Dauer Ihrer ganz pers&ouml;nlichen Reise. Egal wie oft Sie zwischen der Ost- und Westk&uuml;ste Astors pendeln m&uuml;ssen - wir sind f&uuml;r Sie da wenn Sie uns brauchen. An Board haben Sie selbstverst&auml;ndlich Zugriff auf modernste Kommunikationstechnik, einen Besprechungsraum und Platz f&uuml;r die gesamte F&uuml;hrungsriege Ihrer Organisation.</p>
+        </div>
+
+        <div class="col-lg-12 centered gap">
+          <img class="img-responsive center-block" src="/static/imgs/layout/2.png">
+        </div>
+
+        <div class="col-lg-12 centered offer-box">
+          <p>Bitte beachten Sie, dass unsere Business Flugzeuge nur im Ganzen gemietet werden k&ouml;nnen und der Platz auf maximal 46 Passagiere begrenzt ist. Interkontinentale Fl&uuml;ge sind aufgrund der begrenzten Reichweite nur mit Zwischenlandungen m&ouml;glich. Sie finden unsere Business-Shuttle Flugzeuge mitsamt weiteren Informationen unter der Rubrik <a href="{{ url_for('gallery_plane', registration='A-B1S1') }}">Flotte</a>.</p>
+        </div>
+    </div>
+{% endblock %}

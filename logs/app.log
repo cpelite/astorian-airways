@@ -1,0 +1,23 @@
+
+Time: 2018-05-13 19:53:57,221
+Level: ERROR
+Method: GET
+Path: /gallery/live/map.png
+IP: 127.0.0.1
+User ID: 0
+
+Message: Request resulted in Percentage value must be between 0.0 and 1.0 but was 3.017699
+
+---------------------
+Traceback (most recent call last):
+  File "/home/ckoepp/.env/mn/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ckoepp/.env/mn/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ckoepp/sync/private/archiv/micronation/astor/airways/frontend/aaweb/views/gallery.py", line 42, in gallery_live_map
+    flying, coordinates, code = plane.current_position()
+  File "/home/ckoepp/sync/private/archiv/micronation/astor/airways/frontend/aaweb/models.py", line 138, in current_position
+    return(True, ra.route.interpolate(percent_flight), ra.get_flight_number(with_spaces=False))
+  File "/home/ckoepp/sync/private/archiv/micronation/astor/airways/frontend/aaweb/models.py", line 95, in interpolate
+    raise Exception("Percentage value must be between 0.0 and 1.0 but was %f" % percentage)
+Exception: Percentage value must be between 0.0 and 1.0 but was 3.017699

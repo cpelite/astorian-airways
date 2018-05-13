@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% set active_page = ["login"] %}
+
+{% block title %}Login Error{% endblock %}
+
+{% block banner_color %}bg-color4{% endblock %}
+{% block banner_title %}Login Error{% endblock %}
+{% block banner_content %}You shall not pass!{% endblock %}
+
+{% block content %}
+      <div class="row last">
+        <div class="col-md-12 centered offer-box">
+          <div class="img-circle offer-circle centered bg-color3"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
+          <h2>Login Denied</h2>
+          <p>Wie es scheint haben Sie das Passwort und/oder den Benutzernamen falsch eingegeben. Sollten Sie Ihr Passwort vergessen haben, so wenden Sie sich bitte an unseren Kundenservice.</p>
+        </div>
+      </div>
+{% endblock %}

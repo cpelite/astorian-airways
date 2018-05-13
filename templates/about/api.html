@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% set active_page = ["about", "api"] %}
+
+{% block title %}Application Programming Interface{% endblock %}
+
+{% block banner_color %}bg-color2{% endblock %}
+{% block banner_title %}The Astorian Airways API{% endblock %}
+{% block banner_content %}A big yeah to transparency! Let's connect and share our information.{% endblock %}
+
+{% block content %}
+    <div class="row last">
+      <div class="col-lg-12 centered offer-box">
+        <div class="img-circle offer-circle centered bg-black txt-white"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span></div>
+        <h2>Application Programming Interface</h2>
+        <p>Unsere API erlaubt befreundeten Airlines, staatlichen Beh&ouml;rden und jedermann einen maschinenlesbaren Zugriff auf unseren Datenbestand. Um eine komplexe simulierte Umgebung zu erschaffen ist Informationsaustausch unerl&auml;sslich. Dies ist unser Beitrag hierzu. S&auml;mtliche Schnittstellen sind ausschlie&szlig;lich lesbar und folgen dem RESTful Ansatz. Als Austauschformat wird JSON genutzt.</p>
+      </div>
+
+      <div class="col-lg-4 centered offer-box">
+        <div class="img-circle offer-circle centered bg-color5"><span class="glyphicon glyphicon-road" aria-hidden="true"></span></div>
+        <h2>Airports</h2>
+        <p>Alle Flugh&auml;fen in unseren System sind &uuml;ber eine RESTful API abrufbar. So sind alle ankommenden und abgehenden Routen von und nach Astoria City sowie diverse Meta-Information zum Flughafen selbst auf  <code>{{ url_for('api_airport_details',code='OJI') }}</code> einsehbar. Die dreistelligen Codes f&uuml;r einzelne Flugh&auml;fen k&ouml;nnen den jeweiligen staatlichen Beh&ouml;rden oder <code>{{ url_for('api_airports') }}</code> entnommen werden.</p>
+      </div>
+
+      <div class="col-lg-4 centered offer-box">
+        <div class="img-circle offer-circle centered bg-color4"><span class="glyphicon glyphicon-plane" aria-hidden="true"></span></div>
+        <h2>Planes</h2>
+        <p>Diverse Informationen zu unseren Flugzeugen k&ouml;nnen ebenfalls &uuml;ber die API abgefragt werden. Zus&auml;tzlich zu den Daten &uuml;ber Passagiere, Besatzung und Hersteller finden sich auch Angaben &uuml;ber die aktuelle Situation sowie aktuelle Koordinaten der Maschine in der API <code>{{ url_for('api_plane_details', registration='A-ARYA') }}</code>. Eine allgemeine Sicht auf all unsere Maschinen ist unter <code>{{ url_for('api_current_planes') }}</code> einsehbar. Sie enth&auml;lt auch die Registrierungsnummern aller AA-Flugzeuge um mehr Details abzurufen.</p>
+      </div>
+
+      <div class="col-lg-4 centered offer-box">
+        <div class="img-circle offer-circle centered bg-color1"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></span></div>
+        <h2>Flights</h2>
+        <p>Auch all unsere Fl&uuml;ge sind &uuml;ber die API einsehbar. Auf <code>{{ url_for('api_flight_details', flight_number='AA5003') }}</code> zum Beispiel werden Information zum Flug AA 5003 angezeigt. Neben Ankunft- und Abflugzeiten werden dabei auch die Wochentage, an denen der Linienverkehr stattfindet, ausgegeben. Die Flugdauer wird dabei in Minuten angezeigt. Es existiert auch eine <a href="{{ url_for('gallery_live_map') }}">Live-Karte mit aktuell stattfindenden Fl&uuml;gen</a>. Bitte beachtet dabei die HTTP Cache-Header um die Server nicht st&auml;ndig unn&ouml;tig mit der Generierung neuer Karten zu belasten.</p>
+      </div>
+    </div>
+{% endblock %}

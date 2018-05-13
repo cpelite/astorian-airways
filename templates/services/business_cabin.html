@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% set active_page = ["service", "business_cabin"] %}
+
+{% block title %}Business Cabin{% endblock %}
+
+{% block banner_color %}bg-color3{% endblock %}
+{% block banner_title %}Business Cabin Features{% endblock %}
+{% block banner_content %}Your guarantee for a truly relaxed flight: Astorian Airways Business Class{% endblock %}
+
+{% block content %}
+    <div class="row last">
+
+        <div class="col-lg-12">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+            <!-- indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+              <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
+
+            <!-- wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+
+
+              <div class="item centered active">
+                <img class="img-responsive center-block" src="/static/imgs/eyecatcher/business_1.jpg" alt="Hong Nam">
+                <div class="carousel-caption offer-box txt-black">
+                  <h2>Frische Gourmetkost</h2>
+                  <p>In unserer Business Class servieren wir Ihnen frische Mahlzeiten in Restaurant-Qualit&auml;t. Genie&szlig;en Sie hervorragende astorische K&uuml;che in 10.000 Metern H&ouml;he und schweben Sie uns auch kulinarische auf Wolke Sieben.</p>
+                </div>
+              </div>
+
+              <div class="item centered">
+                <img class="img-responsive center-block" src="/static/imgs/eyecatcher/business_2.jpg" alt="Astoria City">
+                <div class="carousel-caption offer-box">
+                  <h2>Snacks &amp; Getr&auml;nke</h2>
+                  <p>Neben dem &uuml;blichen Entertainment-Programm an Board unserer Flugzeuge sind unsere Business Sitze mit einer eignen Minibar ausgetsattet. Genehmigen Sie sich einen Happen zwischendurch w&auml;hrend Sie eine unserer spannenden Krimiserien auf Ihrem Tablet erleben.</p>
+                </div>
+              </div>
+
+              <div class="item centered">
+                <img class="img-responsive center-block" src="/static/imgs/eyecatcher/business_3.jpg" alt="El Conjunto">
+                <div class="carousel-caption offer-box">
+                  <h2>Privatsph&auml;re &amp; Komfort</h2>
+                  <p>Lehnen Sie sich zur&uuml;ck und lassen Sie sich von uns verw&ouml;hnen. Unsere Sitze wurden entwickelt um Ihr pers&ouml;nliches Flugerlebnis so angenehm wie m&ouml;glich zu gestalten.</p>
+                </div>
+              </div>
+
+              <div class="item centered">
+                <img class="img-responsive center-block" src="/static/imgs/eyecatcher/business_4.jpg" alt="New Beises">
+                <div class="carousel-caption offer-box txt-black">
+                  <h2>Ausgewogene Men&uuml;s</h2>
+                  <p>W&auml;hlen Sie zwischen f&uuml;nf unserer Men&uuml;s oder probieren Sie sie gleich alle. Wir gehen auch an Board auf Ihre individuellen W&uuml;nsche ein und k&ouml;nnen auch Feinschmecker zufrieden stellen.</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 centered offer-box">
+          <div class="img-circle offer-circle centered bg-color2"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span></div>
+          <h2>Business Class</h2>
+          <p>Mit einem Business Class Ticket d&uuml;rfen Sie in einem unserer komfortablen Business Sitze Platz nehmen. Entspannen Sie sich, denn selbst ein Schl&auml;fchen ist hier m&ouml;glich. Jeder Sitz kann um 90 Grad gedreht werden und wird so zum fliegenden Bett. Mehrmals w&auml;hrend des Fluges wird unsere Crew Ihnen bezaubernde Leckerbissen servieren. Die besten Wein-, Sekt- und Biersorten runden das Geschmackserlebnis &uuml;ber den Wolken ab. Neben dem Standard-Entertainment System steht unseren Business-Kunden auch der Zugriff auf das Internet jederzeit kostenfrei zur Verf&uuml;gung.</p>
+        </div>
+
+        <div class="col-lg-6 centered offer-box">
+          <div class="img-circle offer-circle centered bg-color1"><span class="glyphicon glyphicon-lamp" aria-hidden="true"></span></div>
+          <h2>Lounge Access</h2>
+          <p>Mit einem Business Class Ticket hat jeder Gast, vor oder nach dem Flug, Zutritt zur Astorian Airways Lounge am internationalen Flughafen von Astor City. Dort stehen diverse Dienstleistungen zu Ihrer Verfügung: die Astorian Airways Bar mit regionalen Alkoholspezialitäten, ein internationales Buffet mit vielfältigen Speisen, gemütliche Arbeitsplätze und eine Kollektion der beliebtesten Tageszeitungen Astors.</p>
+        </div>
+
+    </div>
+{% endblock %}

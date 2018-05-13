@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% set active_page = ["home"] %}
+
+{% block title %}Home{% endblock %}
+
+{% block banner_color %}bg-color4{% endblock %}
+{% block banner_title %}Astorian Airways{% endblock %}
+{% block banner_content %}The newest member of the aviation community within the United States of Astor. We connect the biggest cities on the continent with our modern fleet.{% endblock %}
+
+{% block content %}
+      <div class="row last">
+        <div class="col-lg-12">
+          <div id="carousel" class="carousel slide" data-ride="carousel">
+
+            <!-- indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel" data-slide-to="1"></li>
+              <li data-target="#carousel" data-slide-to="2"></li>
+              <li data-target="#carousel" data-slide-to="3"></li>
+              <li data-target="#carousel" data-slide-to="3"></li>
+            </ol>
+
+            <!-- wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+
+              <div class="item centered active">
+                <img class="img-responsive center-block" src="/static/imgs/eyecatcher/main_7.jpg" alt="Welcome to Astor boys">
+                <div class="carousel-caption offer-box">
+                </div>
+              </div>
+
+              <div class="item centered">
+                <img class="img-responsive center-block" src="/static/imgs/eyecatcher/main_6.jpg" alt="Merry Christmas">
+                <div class="carousel-caption offer-box">
+                </div>
+              </div>
+
+              <div class="item centered">
+                <img class="img-responsive center-block" src="/static/imgs/eyecatcher/main_5.jpg" alt="We have cookies">
+                <div class="carousel-caption offer-box">
+                </div>
+              </div>
+
+              <div class="item centered">
+                <img class="img-responsive center-block" src="/static/imgs/eyecatcher/main_2.jpg" alt="Book now">
+                <div class="carousel-caption offer-box">
+                </div>
+              </div>
+
+              <div class="item centered">
+                <img class="img-responsive center-block" src="/static/imgs/eyecatcher/main_3.jpg" alt="You derserve better">
+                <div class="carousel-caption offer-box">
+                </div>
+              </div>
+
+            </div>
+
+            <!-- controls -->
+            <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-12 centered offer-box">
+          <div class="img-circle offer-circle centered bg-black txt-white"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span></div>
+          <h2>Taking Care of Your Mobility</h2>
+          <p>Gro&szlig;artige L&auml;nder brauchen gro&szlig;artige Mobilit&auml;tsl&ouml;sungen. <span class="mind">Astorian Airways</span> hat sich diesem Ziel verschrieben und will Reisen in <a href="http://www.vs-astor.info/" target="_blank">Astor</a> bequemer, schneller und effizienter machen. Mit unserer Flotte bringen wir Sie an Ihr Ziel und verbinden die wichtigsten St&auml;dte Astors. Testen Sie uns!</p>
+        </div>
+
+        <div class="col-md-3 centered offer-box">
+          <div class="img-circle offer-circle centered bg-color2"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></div>
+          <h2>Shopping</h2>
+          <p>Unsere Fl&uuml;ge bieten lokale Produkte aus allen Regionen Astors zu sensationellen Preisen. Reisen und Einkaufen zur selben Zeit, <span class="mind">Astorian Airways</span> macht es m&ouml;glich. Unser Kabinen-Personal ber&auml;t Sie gerne an Board eines unserer Fl&uuml;ge.</p>
+        </div>
+
+        <div class="col-md-3 centered offer-box">
+          <div class="img-circle offer-circle centered bg-color3"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span></div>
+          <h2>Entertainment</h2>
+          <p>Unsere Flotte ist mit einem modernen und leistungsstarken Entertainment-System ausgestattet. Ob Filme, Musik, H&ouml;rb&uuml;cher oder Nachrichten, <span class="mind">Astorian Airways</span> Passagiere kommen in allen Klassen auf Ihre Kosten.</p>
+        </div>
+
+        <div class="col-md-3 centered offer-box">
+          <div class="img-circle offer-circle centered bg-color5"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span></div>
+          <h2>Business Class</h2>
+          <p>Reisen Sie mit noch mehr Komfort und genie&szlig;en Sie erstklassiges Essen &uuml;ber den Wolken. In der Business Class von <span class="mind">Astorian Airways</span> erhalten Sie individualisierten Service am Flughafen sowie in der Kabine.</p>
+        </div>
+
+        <div class="col-md-3 centered offer-box">
+          <div class="img-circle offer-circle centered bg-color1"><span class="glyphicon glyphicon-king" aria-hidden="true"></span></div>
+          <h2>VIP Services</h2>
+          <p>F&uuml;r anspruchsvolle Kunden bieten wir einen Privat-Jet Service. Sie bestimmen wann und wohin die Reise geht. Vertrauen Sie Ihre Mobilti&auml;t <span class="mind">Astorian Airways</span> an und kommen Sie garantiert entspannt zum n&auml;chsten Termin.</p>
+        </div>
+
+      </div>
+{% endblock %}

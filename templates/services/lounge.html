@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% set active_page = ["service", "lounge"] %}
+
+{% block title %}Lounge{% endblock %}
+
+{% block banner_color %}bg-color3{% endblock %}
+{% block banner_title %}The Astorian Airways Lounges{% endblock %}
+{% block banner_content %}Feel the Astorian Spirit of hospitality and visit our lounges in Astoria City and Camber-Perf.{% endblock %}
+
+{% block content %}
+      <div class="row last">
+
+        <div class="col-lg-12">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+            <!-- indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+              <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol>
+
+            <!-- wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+
+
+              <div class="item centered active">
+                <img class="img-responsive center-block" src="/static/imgs/eyecatcher/lounge_1.jpg" alt="Hong Nam">
+                <div class="carousel-caption offer-box">
+                  <h2>Astorian Airways Bar</h2>
+                  <p>Nicht nur auf dem Weg zum n&auml;chsten Gesch&auml;ftstermin sind wir f&uuml;r Sie da. Setzen Sie sich an unsere Bar, genie&szlig;en Sie regionale Bierspezialit&auml;ten und f&uuml;hren Sie spannende Unterhaltungen. Bei uns sind nicht die Gespr&auml;che sondern auch alkoholische Getr&auml;nke inklusive.</p>
+                </div>
+              </div>
+
+              <div class="item centered">
+                <img class="img-responsive center-block" src="/static/imgs/eyecatcher/lounge_2.jpg" alt="Astoria City">
+                <div class="carousel-caption offer-box">
+                  <h2>Feinkost Buffet</h2>
+                  <p>Warten Sie nicht bis Ihr Flieger geht, sondern genie&szlig;en Sie schon vorher Spezialit&auml;ten aus den besten K&uuml;chen Astors. Unsere Speisen werden rund um die Uhr frisch f&uuml;r Sie zubereitet und sind f&uuml;r alle Lounge-Besucher kostenlos verf&uuml;gbar.</p>
+                </div>
+              </div>
+
+              <div class="item centered">
+                <img class="img-responsive center-block" src="/static/imgs/eyecatcher/lounge_3.jpg" alt="El Conjunto">
+                <div class="carousel-caption offer-box">
+                  <h2>Entspannte Atmosph&auml;re</h2>
+                  <p>Arbeiten Sie noch an Ihrer Pr&auml;sentation bevor Ihr Flug geht oder lassen Sie den Tag gemeinsam mit Freunden beim Abendessen mit dem Blick auf die Landebahn ausklingen. In unserer entspannten Lounge Atmosph&auml;re ist vieles m&ouml;glich und nur Ihre Kreativit&auml;t die Grenze.</p>
+                </div>
+              </div>
+
+              <div class="item centered">
+                <img class="img-responsive center-block" src="/static/imgs/eyecatcher/lounge_4.jpg" alt="New Beises">
+                <div class="carousel-caption offer-box">
+                  <h2>Lesestoff Inklusive</h2>
+                  <p>In unserer Lounge liegen Tag und Nacht die tagesaktuelle Zeitungen und Magazine f&uuml;r Sie aus. Schnappen Sie sich Ihre Lieblingslekt&uuml;re und einen unserer kostenlosen Kaffeespezialit&auml;ten bevor Sie in Ihren Flieger steigen.</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-12 centered offer-box">
+          <div class="img-circle offer-circle centered bg-color5"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></div>
+          <h2>Locations</h2>
+          <p>Sie finden unsere Lounges an unseren nationalen und internationalen Drehkreuzen. Derzeit sind das der Ole Jann Airport in <span class="mind">Astoria City</span> und der International Airport von <span class="mind">Camber-Perf</span>. Besuchen Sie uns!</p>
+        </div>
+
+        <div class="col-lg-6 centered offer-box">
+          <div class="img-circle offer-circle centered bg-color4"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></div>
+          <h2>Home Sweet Home</h2>
+          <p>Wir wollen, dass Sie sich wie zu Hause f&uuml;hlen. Die <span class="mind">Astorian Airways</span> Lounge ist daher gro&szlig;z&uuml;gig ausgelegt und bietet viel Platz f&uuml;r Sie und Ihre Familie oder Gesch&auml;ftspartner. Neben der entspannenden Atmosph&auml;re k&ouml;nnen Sie unsere Services nutzen, die wir f&uuml;r alle unsere Business Class G&auml;ste anbieten. Ein Flug kann so viel mehr sein als nur ein Transport!</p>
+        </div>
+
+        <div class="col-lg-6 centered offer-box">
+          <div class="img-circle offer-circle centered bg-color2"><span class="glyphicon glyphicon-glass" aria-hidden="true"></span></div>
+          <h2>Beverages &amp; Food</h2>
+          <p>Haben Sie ein Ticket unserer Business Class erstanden, so k&ouml;nnen Sie vor und nach Ihrem Flug unserer <span class="mind">Astorian Airways</span> Lounge einen Besuch abstatten. Alle Getr&auml;nke und Speisen sind f&uuml;r die Dauer Ihres Aufenthalts nat&uuml;rlich kostenlos. Genie&szlig;en Sie unser Buffet, ein Bier mit Freunden oder eine unserer Kaffeespezialit&auml;ten zu Ihrer Lieblingszeitung.</p>
+        </div>
+
+    </div>
+{% endblock %}

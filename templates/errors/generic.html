@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% set active_page = ["error"] %}
+
+{% block title %}Error {{ code }}{% endblock %}
+
+{% block banner_color %}bg-color3{% endblock %}
+{% block banner_title %}Error {{ code }}: {{ name }}{% endblock %}
+{% block banner_content %}{{ description }}{% endblock %}
+
+{% block content %}
+  <div class="row last">
+    <div class="col-md-12 centered offer-box">
+      <p class="last"><img src="http://i.imgur.com/{{ gif }}.gif"></p>
+    </div>
+  </div>
+{% endblock %}

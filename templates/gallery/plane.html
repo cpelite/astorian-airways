@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% set active_page = ["about", "fleet"] %}
+
+{% block title %}Plane Details{% endblock %}
+
+{% block banner_color %}bg-color2{% endblock %}
+{% block banner_title %}Plane Details of {{ plane.registration }}{% endblock %}
+{% block banner_content %}{{ plane.aircraft }} built by {{ plane.manufacturer }}{% endblock %}
+
+{% block content %}
+    {% if plane.comment %}
+    <div class="row last">
+      <div class="col-lg-12 centered offer-box">
+        <div class="img-circle offer-circle centered bg-color3"><span class="glyphicon glyphicon-alert" aria-hidden="true"></span></div>
+        <h2>Important Information</h2>
+        <p>{{ plane.comment }}</p>
+      </div>
+    </div>
+    {% endif %}
+    
+    <div class="row last">
+        <div class="col-lg-12 centered offer-box">
+          <div class="img-circle offer-circle centered bg-black txt-white"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span></div>
+          <h2>General Details</h2>
+          <p>Das Modell {{ plane.aircraft }} wurde von {{ plane.manufacturer }} hergestellt. Zur Indienstnahme erhielt es den Namen <span class="mind">{{ plane.alias }}</span> und die staatliche Registrierung {{ plane.registration }}. Zum Betrieb sind stets  {{ plane.pilots + plane.layout.flight_attendants }} Mitarbeiter im Einsatz. Sie teilen sich auf in {{ plane.pilots }} Piloten und {{ plane.layout.flight_attendants }} Flugbegleiter.</p>
+
+          <p>Dieses Maschine wird von <span class="mind">{{ plane.operator.name }}</span> betrieben und haupts&auml;chlich für {{ plane.purpose }} eingesetzt.
+          {% if plane.operator != plane.owner %}Dieses Flugzeug wird aktuell von <span class="mind">{{ plane.owner.name }}</span> an {{ plane.operator.name }} verleast.{% endif %}</p>
+        </div>
+
+        <div class="col-lg-12 centered">
+          <img class="img-responsive center-block" src="/static/imgs/planes/{{ plane.registration|lower }}.png">
+        </div>
+    </div>
+
+    <div class="row last">
+        <div class="col-lg-12 centered offer-box">
+          <div class="img-circle offer-circle centered bg-black txt-white"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></div>
+          <h2>Detailed Cabin Layout</h2>
+          <p>{% if plane.operator.ownCompany %}All unsere Kabinen sind mit hochwertigem Material ausgestattet. Ledersitze sind keine Frage der Buchungsklasse, sondern eine Selbstverst&auml;ndlichkeit. Wir bieten Ihnen den Komfort den Sie verdienen! Jeder einzelne unserer Sitze ist mit einem dedizierten USB Anschlu&szlig; sowie einer eigenen Steckdose ausger&uuml;stet. Bequemes Arbeiten am Laptop und das sichere Aufladen Ihrer elektrischen Ger&auml;te sind bei uns garantiert. {% endif %}
+
+          Die <span class="mind">{{ plane.alias }}</span> ist mit insgesamt {{ plane.layout.economy_class + plane.layout.business_class + plane.layout.first_class }} Sitzen ausgestattet. Unsere {{ plane.layout.flight_attendants }} Flugbegleiter betreuen {% if  plane.layout.first_class > 0 %}{{ plane.layout.first_class }} Reisende der First-Class, {% endif %}{{  plane.layout.business_class }} G&auml;ste in der Business-Class sowie {{ plane.layout.economy_class }} Passagiere der Economy-Class.</p>
+        </div>
+
+        <div class="col-lg-12 centered gap">
+          <img class="img-responsive center-block" src="/static/imgs/layout/{{ plane.layout.picture }}">
+        </div>
+    </div>
+
+    <div class="row last">
+        <div class="col-lg-12 centered offer-box">
+          <div class="img-circle offer-circle centered bg-black txt-white"><span class="glyphicon glyphicon-list" aria-hidden="true"></span></div>
+          <h2>Currently Assigned Routes</h2>
+
+          {% if plane.get_amount_of_active_routes() > 0 %}
+          <p>Die Maschine {{ plane.registration }} ist derzeit f&uuml;r die folgenden {{ plane.get_amount_of_active_routes() }} Regel-Fl&uuml;ge eingeteilt. &Auml;nderung der Routenzuweisungen und der Flugzeitpunkte k&ouml;nnen jedoch jederzeit durch die Disposition erfolgen. Dies kann ausdr&uuml;cklich auch kurzfristig und ohne Vorank&uuml;ndigung erfolgen.</p>
+          {% else %}
+          <p>Die Maschine {{ plane.registration }} ist derzeit f&uuml;r keine Regel-Fl&uuml;ge eingeteilt. Es wird ausschlie&szlig;lich f&uuml;r {{ plane.purpose }} eingesetzt.</p>
+          {% endif %}
+        </div>
+    </div>
+
+      {% if plane.get_amount_of_active_routes() > 0 %}
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Flug</th>
+              <th>Von</th>
+              <th>Nach</th>
+              <th>Abflug</th>
+              <th>Ankunft</th>
+              <th>Tage</th>
+              <th>Dauer</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for a in plane.assignments %}
+            {% if a.active %}
+            <tr>
+              <td>{{ loop.index }}</td>
+              <td>{{ a.get_flight_number() }}</td>
+              <td>{{ a.route.departure.name }} ({{ a.route.departure.code }})</td>
+              <td>{{ a.route.arrival.name }} ({{ a.route.arrival.code }})</td>
+              <td>{{ a.calculate_departure_time().strftime("%H:%M") }}</td>
+              <td>{{ a.calculate_arrival_time().strftime("%H:%M") }}</td>
+              <td>
+                {% if a.monday %}MO{% endif %}
+                {% if a.tuesday %}DI{% endif %}
+                {% if a.wednesday %}MI{% endif %}
+                {% if a.thursday %}DO{% endif %}
+                {% if a.friday %}FR{% endif %}
+                {% if a.saturday %}SA{% endif %}
+                {% if a.sunday %}SO{% endif %}
+              </td>
+              <td>{{ a.calculate_duration_time().strftime("%H:%M") }}h</td>
+            </tr>
+            {% endif %}
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% endif %}
+
+    <div class="row last"></div>
+  </div>
+{% endblock %}

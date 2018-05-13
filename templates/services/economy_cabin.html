@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% set active_page = ["service", "economy_cabin"] %}
+
+{% block title %}Economy Cabin{% endblock %}
+
+{% block banner_color %}bg-color1{% endblock %}
+{% block banner_title %}Economy Cabin features{% endblock %}
+{% block banner_content %}Save money, get quality. That is what our Economy Class is all about.{% endblock %}
+
+{% block content %}
+    <div class="row last">
+
+        <div class="col-lg-12">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+            <!-- indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+
+              <div class="item centered active">
+                <img class="img-responsive center-block" src="/static/imgs/eyecatcher/economy_1.jpg" alt="Hong Nam">
+                <div class="carousel-caption offer-box">
+                  <h2>Individuelles Entertainment</h2>
+                  <p>Jeder unserer Sitze in der Economy Class ist mit einem eigenen Entertainmentsystem ausgestattet. Neben einer gro&szlig;en Film-, Musik- und Serienauswahl verf&uuml;gen unsere Maschinen auch &uuml;ber Au&szlig;enkameras mit denen Sie jederzeit das Geschehen verfolgen k&ouml;nnen.</p>
+                </div>
+              </div>
+
+              <div class="item centered">
+                <img class="img-responsive center-block" src="/static/imgs/eyecatcher/economy_2.jpg" alt="Astoria City">
+                <div class="carousel-caption offer-box">
+                  <h2>Beinfreiheit &amp; Komfort</h2>
+                  <p>Wir legen Wert auf Qualit&auml;t und stellen all unseren G&auml;sten gro&szlig;z&uuml;gig gepolsterte Sitze der neusten Generation zur Verf&uuml;gung.</p>
+                </div>
+              </div>
+
+              <div class="item centered">
+                <img class="img-responsive center-block" src="/static/imgs/eyecatcher/economy_3.jpg" alt="El Conjunto">
+                <div class="carousel-caption offer-box">
+                  <h2>Entertainment &uuml;ber den Wolken</h2>
+                  <p>Genie&szlig;en Sie astorische Kino-Klassiker, die neusten Serien und die beste Musik des Landes. Unser Entertainment-Programm l&auml;sst keine W&uuml;nsche offen.</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 centered offer-box">
+          <div class="img-circle offer-circle centered bg-color2"><span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span></div>
+          <h2>Economy Class</h2>
+          <p>Unsere preiswerte Economy Class bietet Ihnen viel Beinfreiheit und Komfort. Auf Langstrecken-Fl&uuml;gen sind selbstverst&auml;ndlich auch eine Decke sowie ein Kissen in unserem Service inbegriffen. Fliegen Sie f&uuml;r wenig Geld weit in die Ferne und genie&szlig;en Sie unsere Economy Class.</p>
+        </div>
+
+        <div class="col-lg-6 centered offer-box">
+          <div class="img-circle offer-circle centered bg-color4"><span class="glyphicon glyphicon-music" aria-hidden="true"></span></div>
+          <h2>On Board Entertainment</h2>
+          <p>Lassen Sie sich verzaubern von unserer Musik- und Filmauswahl. In unserer digitalen Board-Bibilothek finden Sie sowohl zeitlose Klassiker sowie zeitgen&ouml;ssische Werke bekannter astorischer K&uuml;nstler. Buchen Sie Ihr Economy class Erlebnis noch heute!</p>
+        </div>
+    </div>
+{% endblock %}

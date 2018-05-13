@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% set active_page = ["about", "destinations"] %}
+
+{% block title %}Destinations{% endblock %}
+
+{% block banner_color %}bg-color2{% endblock %}
+{% block banner_title %}The Astorian Airways Route Map{% endblock %}
+{% block banner_content %}Whereever you wanna go: we can make it happen.{% endblock %}
+
+{% block content %}
+    <div class="row last">
+        <div class="col-lg-12 centered offer-box">
+          <div class="img-circle offer-circle centered bg-black txt-white"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></div>
+          <h2>Continental Destinations</h2>
+          <p>Wir fliegen Sie t&auml;glich in die aufregendsten und beliebtesten St&auml;dte Astors, Straliens und Livornien. Durch unsere Drehkreuze in Astor City, Sen City und Camber-Perf verbinden wir die gr&ouml;&szlig;ten St&auml;dte des Kontinents und erm&ouml;glichen Ihnen mit maximal zwei Umstiegen jedes Ziel zu erreichen. Profitieren auch Sie von unseren Strecken und buchen Sie noch heute Ihr Flugerlebnis!</p>
+
+          <img class="img-responsive center-block" src="/static/imgs/map.png" class="gap">
+
+          <p>Ob sommerliche Sonnenunterg&auml;nge mit auf Geelong mit einem Glas frischgepressten Orangensaft, ein Shopping-Ausflug zu den ber&uuml;hmten Jeansl&auml;den in New Beises, ein Sightseeing Wochenende in Altburg oder die winterliche Schlittschuhfahrt auf einem der zugefrorenen Seen in der Umgebung von Gareth - wir fliegen Sie zu Ihren astorischen Traumzielen.</p>
+        </div>
+      </div>
+
+    <div class="row last">
+        <div class="col-lg-12 centered offer-box">
+          <div class="img-circle offer-circle centered bg-black txt-white"><span class="glyphicon glyphicon-list" aria-hidden="true"></span></div>
+          <h2>Destination Details</h2>
+          <p>Mit <span class="mind">Astorian Airways</span> erreichen Sie spannende und vielf&auml;ltige Destination. Diese Liste f&uuml;hrt alle aktuell von uns angeflogenen Ziele mit Ihrer jeweiligen Flugdauer auf. Insgesamt existieren <b>{{ active_routes|length }} aktive Routen</b>.</p>
+        </div>
+    </div>
+
+    <div class="table-responsive last">
+      <table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Abflug</th>
+            <th>Ankunft</th>
+            <th>Flugdauer</th>
+            <th>Int. Flug</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for r in active_routes %}
+          <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ r.departure.name }} (<b>{{ r.departure.code }}</b>)<br /><a href="{{ r.departure.country.website }}" target="_blank">{{ r.departure.country.name }}</a></td>
+            <td>{{ r.arrival.name }} (<b>{{ r.arrival.code }}</b>)<br /><a href="{{ r.arrival.country.website }}" target="_blank">{{ r.arrival.country.name }}</a></td>
+            <td>{{ r.duration// 60 }}hrs {{ r.duration % 60 }}min</td>
+            <td><span class="glyphicon glyphicon-{% if r.departure.country != r.arrival.country %}ok txt-color1{% else %}remove txt-color3{% endif %}" aria-hidden="true"></span></td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}

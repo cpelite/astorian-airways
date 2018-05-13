@@ -1,0 +1,303 @@
+/* open-sans-regular - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/static/fonts/open-sans-v10-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Open Sans'), local('OpenSans'),
+       url('/static/fonts/open-sans-v10-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/static/fonts/open-sans-v10-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/static/fonts/open-sans-v10-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/static/fonts/open-sans-v10-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/static/fonts/open-sans-v10-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+
+/* oxygen-mono-regular - latin */
+@font-face {
+  font-family: 'Oxygen Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/static/fonts/oxygen-mono-v4-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Oxygen Mono'), local('OxygenMono-Regular'),
+       url('/static/fonts/oxygen-mono-v4-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/static/fonts/oxygen-mono-v4-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/static/fonts/oxygen-mono-v4-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/static/fonts/oxygen-mono-v4-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/static/fonts/oxygen-mono-v4-latin-regular.svg#OxygenMono') format('svg'); /* Legacy iOS */
+}
+
+/* lato-regular - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/static/fonts/lato-v11-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Lato Regular'), local('Lato-Regular'),
+       url('/static/fonts/lato-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/static/fonts/lato-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/static/fonts/lato-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/static/fonts/lato-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/static/fonts/lato-v11-latin-regular.svg#Lato') format('svg'); /* Legacy iOS */
+}
+/* lato-900 - latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: bold;
+  font-weight: 900;
+  src: url('/static/fonts/lato-v11-latin-900.eot'); /* IE9 Compat Modes */
+  src: local('Lato Black'), local('Lato-Black'),
+       url('/static/fonts/lato-v11-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/static/fonts/lato-v11-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/static/fonts/lato-v11-latin-900.woff') format('woff'), /* Modern Browsers */
+       url('/static/fonts/lato-v11-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/static/fonts/lato-v11-latin-900.svg#Lato') format('svg'); /* Legacy iOS */
+}
+
+.checkrow {
+  border: 5px solid;
+  font-size: 20px;
+}
+
+.check {
+  font-family: 'Oxygen Mono', "Courier New", Courier, monospace;
+}
+
+.rotate-up   {  
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+}
+
+.rotate-down   {  
+    -webkit-transform:rotate(135deg);
+    -moz-transform:rotate(135deg);
+    -o-transform:rotate(135deg);
+    -ms-transform:rotate(135deg);
+}
+
+.rotate-equal   {  
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -o-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #1a1a1a;
+}
+
+nav {
+        font-family: 'Lato', sans-serif; 
+}
+
+h2 {
+    font-family: 'Lato', sans-serif; 
+    font-weight: bold; 
+    font-size: 35px;
+}
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+canvas {
+    padding-top: 15px;
+}
+
+table a {
+    color: #1a1a1a;
+    text-decoration: underline;
+}
+
+table a:visited {
+    color: #1a1a1a;
+    text-decoration: underline;
+}
+
+table a:hover {
+    color: #fa3736;
+    text-decoration: none;
+}
+
+.offer-box p a {
+    text-decoration: underline;
+}
+
+.offer-box p a:visited {
+    color: #1a1a1a;
+    text-decoration: underline;
+}
+
+.offer-box p a:hover {
+    color: #fa3736;
+    text-decoration: none;
+}
+
+
+.blogentry {
+    text-align: left;
+}
+
+.banner {
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 80px;
+}
+
+.banner img {
+    float: left;
+    padding-right: 20px;
+    border-right: 4px solid;
+    border-color: #1a1a1a;
+    margin-right: 20px;
+}
+
+.banner p {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+
+.mind {
+    font-family: 'Lato', sans-serif; 
+    font-weight: bold; 
+}
+
+.last {
+    padding-bottom: 50px;
+}
+
+.gap {
+  margin-top: 10px;
+  margin-bottom: 10px:;
+}
+
+.centered {
+    text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.offer-box {
+    margin-top: 20px;
+    padding-top: 20px;
+    font-size: 18px;
+}
+
+.offer-box h3 {
+    font-size: 15px;
+    font-family: 'Lato', sans-serif; 
+}
+
+.offer-box a:visited {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.offer-box a:hover {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.offer-box a {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.offer-box ol {
+    text-align: left;
+}
+
+.offer-box ol li {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.offer-circle {
+    width: 120px; 
+    height: 120px; 
+    font-size: 50px;
+    display: inline-block;
+    border: 2px, solid;
+}
+
+.offer-circle span {
+    vertical-align: middle;
+    display: inline-block;
+    padding-top: 35px;
+}
+
+.txt-white {
+    color: #ffffff;
+}
+
+.txt-black {
+    color: #1a1a1a;
+}
+
+.offer-label {
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    border-radius: 15px;
+}
+
+.offer-price {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.bg-black {
+    background-color: #1a1a1a;
+}
+
+.bg-color1 {
+    background-color: #b2d923; 
+}
+
+.txt-color1 {
+    color: #b2d923; 
+}
+
+.bg-color2 {
+    background-color: #ff981d; 
+}
+
+.txt-color2 {
+    color: #ff981d; 
+}
+
+.bg-color3 {
+    background-color: #fa3736; 
+}
+
+.txt-color3 {
+    color: #fa3736; 
+}
+
+.bg-color4 {
+    background-color: #27ace3; 
+}
+
+.txt-color4 {
+    color: #27ace3; 
+}
+
+.bg-color5 {
+    background-color: #fcc105; 
+}
+
+.txt-color5 {
+    color: #fcc105; 
+}

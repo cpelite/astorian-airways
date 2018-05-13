@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% set active_page = ["investor"] %}
+
+{% block title %}Investor Relations{% endblock %}
+
+{% block banner_color %}bg-color1{% endblock %}
+{% block banner_title %}Investor Relations{% endblock %}
+{% block banner_content %}Help gathering prosperity and wealth by investing in Astorian Airways.{% endblock %}
+
+{% block content %}
+    <div class="row last">
+        <div class="col-lg-12 centered offer-box">
+          <div class="img-circle offer-circle centered bg-black txt-white"><span class="glyphicon glyphicon-piggy-bank" aria-hidden="true"></span></div>
+          <h2>Financial Structures</h2>
+          <p>Astorian Airways hat seinen Hauptsitz in <a href="http://astor.mnwiki.de/index.php?title=Astoria_City" target="_blank">Astoria City</a>, der Hauptstadt der <a href="http://astor.mnwiki.de/index.php?title=Vereinigte_Staaten_von_Astor">Vereinigten Staaten von Astor</a>. Dort befinden sich der Hauptsitz, die Verwaltung und die technische Zentralabteilung. Durch die starke wirtschaftliche Kooperation, die der Betrieb einer Fluglinie unweigerlich mitbringt, sind mehrere Firmen an der Fluglinie beteiligt:</p>
+        </div>
+    </div>
+
+
+    <div class="table-responsive">
+        <table class="table table-hover table-striped">
+          <thead>
+            <tr>
+              <th>Juristische Person</th>
+              <th>Beteiligung</th>
+              <th>Sitz</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="http://astor.mnwiki.de/index.php?title=Arjan_van_de_Westplate" target="_blank">Arjan van de Westplate</a></td>
+              <td>75 %</td>
+              <td><a href="http://astor.mnwiki.de/index.php?title=Astoria_City">Astoria City</a>, <a href="http://astor.mnwiki.de/index.php?title=Vereinigte_Staaten_von_Astor">Vereinigten Staaten von Astor</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://astor.mnwiki.de/index.php?title=Tang_Industrial_Services">Tang Industrial Services</a></td>
+              <td>20 %</td>
+              <td><a href="http://astor.mnwiki.de/index.php?title=Hong_Nam">Hong Nam</a>, <a href="http://astor.mnwiki.de/index.php?title=Vereinigte_Staaten_von_Astor">Vereinigten Staaten von Astor</a></td>
+            </tr>
+            <tr>
+              <td><a href="http://forum.astor.ws/index.php?page=Thread&postID=340274">Astorian Telecommunications</a></td>
+              <td>5 %</td>
+              <td><a href="http://astor.mnwiki.de/index.php?title=Astoria_City">Astoria City</a>, <a href="http://astor.mnwiki.de/index.php?title=Vereinigte_Staaten_von_Astor">Vereinigten Staaten von Astor</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+    <div class="row last">
+        <div class="col-lg-12 centered offer-box">
+          <div class="img-circle offer-circle centered bg-color5"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></div>
+          <h2>Technical Partners</h2>
+      <p>Neben den Beteiligungen sind der technische Partner im Flugzeugbau und -betrieb die <a href="http://astor.mnwiki.de/index.php?title=Tang_Industrial_Services">Tang Industrial Services</a>. Das On-Board Entertainment System und die On-Board Internet-Kommunikation mittels Satelliten wird durch unseren Partner <a href="http://forum.astor.ws/index.php?page=Thread&postID=340274">Astorian Telecommunications</a> gestellt.</p>
+        </div>
+    </div>
+
+    <div class="row last">
+      <div class="col-lg-12 centered offer-box">
+        <div class="img-circle offer-circle centered bg-color4"><span class="glyphicon glyphicon-resize-small" aria-hidden="true"></span></div>
+        <h2>Subsidiary Companies</h2>
+        <p>Auch ein global agierendes Unternehmen muss lokal verankert sein. S&auml;mtliche Inlandsfl&uuml;ge die nicht innerhalb Astors stattfinden werden von Tochtergesellschaften der Astorian Airways durchgef&uuml;hrt. Die daf&uuml;r eingesetzten Flugzeuge befinden sich im Besitz von Astorian Airways, werden aber die Tochterunternehmen verleast. Das Personal wird grunds&auml;tzlich vor Ort eingestellt und zentral in den Ausbildungszentren von Astorian Airways im Norden von Astor ausgebildet.</p>
+      </div>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th>Tochter</th>
+            <th>Beteiligung</th>
+            <th>Sitz</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for c in companies if c.ownCompany  and c.name != "Astorian Airways" %}
+          <tr>
+            <td><a href="{{ c.website }}" target="_blank">{{ c.name }}</a></td>
+            <td>{{ c.percentOwned }} %</td>
+            <td><a href="{{ c.country.website }}" target="_blank">{{ c.country.name }}</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+
+      <div class="row last"></div>
+    </div>
+{% endblock %}
